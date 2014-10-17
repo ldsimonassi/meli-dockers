@@ -9,3 +9,6 @@ ENV PATH $PATH:$GRAILS_HOME/bin
 CMD ["/bin/bash"]
 
 #TODO Add On Boot behavior to copy sources and generate ouput volumes.
+ONBUILD COPY ./ /sources
+ONBUILD WORKDIR /sources
+ONBUILD RUN grails test-app &&  grails war
