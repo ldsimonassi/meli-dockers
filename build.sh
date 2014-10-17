@@ -1,14 +1,9 @@
 #!/bin/bash
-
-    if [ $status -ne 0 ]; then
-        echo "error with $1" >&2
-    fi
-
 USER=$1
 VERSION=$(cat version)
+IMAGES=( "melibuntu" "melibuntujdk" "tomcat-runtime" "grails-build" )
 
-for IMAGE in */ ; do
-	IMAGE=${IMAGE%/}
+for IMAGE in "${IMAGES[@]}" ; do
 	cd $IMAGE
 	echo "----------------------------------------"
 	echo "Starting building process of: $IMAGE"
