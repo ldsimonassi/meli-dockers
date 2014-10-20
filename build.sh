@@ -1,7 +1,7 @@
 #!/bin/bash
 USER=$1
 VERSION=$(cat version)
-IMAGES=( "melibuntu" "melibuntujdk" "tomcat-runtime" "grails-build" )
+IMAGES=( "melibuntu" "melibuntujdk" "tomcat-runtime" "grails" )
 
 for IMAGE in "${IMAGES[@]}" ; do
 	cd $IMAGE
