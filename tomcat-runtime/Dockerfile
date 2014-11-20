@@ -1,8 +1,8 @@
 FROM mlarq/melibuntujdk:latest
 
-RUN curl -SL "http://apache.dattatec.com/tomcat/tomcat-7/v7.0.56/bin/apache-tomcat-7.0.56.tar.gz" | tar xz -C /apps
+RUN curl -SL "https://s3-us-west-2.amazonaws.com/dario-deploys2/apache-tomcat-7.0.57.tar.gz" | tar xz -C /apps
 
-ENV CATALINA_HOME /apps/apache-tomcat-7.0.56
+ENV CATALINA_HOME /apps/apache-tomcat-7.0.57
 
 ENV PATH $PATH:$CATALINA_HOME/bin
 
