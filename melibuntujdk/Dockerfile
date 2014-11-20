@@ -1,4 +1,4 @@
-FROM ldsimonassi/melibuntu:latest
+FROM mlarq/melibuntu:latest
 
 RUN mkdir -p /apps && \
     curl -SL https://s3-us-west-2.amazonaws.com/dario-deploys2/jdk.tar.gz | tar xz -C /apps

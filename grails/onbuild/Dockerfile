@@ -1,5 +1,5 @@
 # Base image for building grails application
-FROM ldsimonassi/grails:latest
+FROM mlarq/grails:latest
 MAINTAINER Simonassi Luis Dario version: 0.1
 
 ONBUILD COPY ./grails-app/conf/BuildConfig.groovy /dummy_app/grails-app/conf/BuildConfig.groovy 
